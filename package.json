@@ -1,6 +1,6 @@
 {
 	"name": "react-api-client-provider",
-	"version": "0.1.0",
+	"version": "1.0.0",
 	"description": "A customizable API client for React that uses axios under the hood",
 	"main": "lib/index.js",
 	"scripts": {
