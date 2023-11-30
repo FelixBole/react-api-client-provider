@@ -90,7 +90,7 @@ declare module "react-api-client-provider" {
 		DELETE(params: RequestParams): Promise<AxiosResponse>;
 	}
 
-	function APIClient(params: ClientProviderParams): IAPIClient;
+	declare const APIClient: IAPIClient;
 
 	/**
 	 * An axios API client wrapper instance that allows
