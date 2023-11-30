@@ -56,8 +56,8 @@ declare module "react-api-client-provider" {
 		setIsError: Dispatch<SetStateAction<boolean>>;
 	}
 
-	interface APIClient {
-		new (params: ClientProviderParams): APIClient;
+	interface IAPIClient {
+		new (params: ClientProviderParams): IAPIClient;
 
 		/**
 		 * Generic request method
@@ -90,6 +90,8 @@ declare module "react-api-client-provider" {
 		DELETE(params: RequestParams): Promise<AxiosResponse>;
 	}
 
+	function APIClient(params: ClientProviderParams): IAPIClient;
+
 	/**
 	 * An axios API client wrapper instance that allows
 	 * it to be shared across components in the Application
@@ -106,7 +108,7 @@ declare module "react-api-client-provider" {
 		/**
 		 * Instance of the API client
 		 */
-		client: APIClient;
+		client: IAPIClient;
 
 		/**
 		 * Extra options set during Provider setup
